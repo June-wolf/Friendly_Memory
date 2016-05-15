@@ -29,7 +29,7 @@ nbr = pygame.Color("black") #chiffres noir
 dos = pygame.Color("0x484848") #dos gris
 face = pygame.Color("white") #face non valide
 rej = pygame.Color("black") #rejouer
-after = pygame.Color("0x2bd1b3")#validé bleu
+after = pygame.Color("0x2bd1b3")#validÃ© bleu
 
 #Initialisation
 scr = pygame.display.set_mode((nbcellsx*cellsize,nbcellsy*cellsize))
@@ -39,9 +39,8 @@ police = pygame.font.Font(None,int(cellsize//1.5))
 firstcard = None # memorise l'index de la 1ere carte retournee par tour
 
 def melange(): 
-    nb_cartes = (nbcellsx*nbcellsy)//2
-    cartes = set_*int(nb_cartes//len(set_))
-    cartes += set_[:nb_cartes%len(set_)]
+    nb_cartes = (nbcellsx*nbcellsy)/2
+    cartes = set_*int(nb_cartes/len(set_))
     cartes *= 2
     shuffle(cartes)
     return cartes
@@ -68,7 +67,7 @@ while True:
     pygame.time.set_timer(pygame.USEREVENT,1000)
     secondes = 0 # lance le chrono
 
-    while any(cartes):# les paires trouvees sont misent a  None dans cartes donc, temps que cartes ne contient pas que des None
+    while any(cartes):# les paires trouvees sont misent aÂ  None dans cartes donc, temps que cartes ne contient pas que des None
         ev = pygame.event.wait()
         if ev.type == pygame.QUIT: break # quitte le jeu
         elif ev.type == pygame.USEREVENT:
